@@ -30,10 +30,6 @@ phases:
       - npm install
       - npm update
       - npm run build
-      - pip install -U pip
-      - pip install -r requirements.txt
-      - python manage.py collectstatic --noinput
-      - python manage.py compilemessages
   #post_build:
     #commands:
       # - command
