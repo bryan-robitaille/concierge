@@ -25,9 +25,7 @@ phases:
 
   build:
     commands:
-      - yum install gcc
-      - yum install mailcap
-      - yum install gettext
+      - yum install -y gcc mailcap gettext 
       - npm install -g npm
       - npm install
       - npm update
