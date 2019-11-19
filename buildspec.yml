@@ -30,7 +30,6 @@ phases:
       - npm install
       - npm update
       - npm run build
-      - pip install --upgrade wheel
       - pip install -r requirements.txt
   #post_build:
     #commands:
