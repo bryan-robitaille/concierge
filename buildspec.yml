@@ -25,11 +25,11 @@ phases:
 
   build:
     commands:
-      - yum install -y gcc mailcap gettext postgresql-devel libjpeg-devel pcre-devel zlib-devel kernel-devel musl-devel
       - npm install -g npm
       - npm install
       - npm update
       - npm run build
+      - pip install -U pip
   #post_build:
     #commands:
       # - command
