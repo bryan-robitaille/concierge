@@ -15,7 +15,7 @@ phases:
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
     runtime-versions:
       python: 3.7
-      # name: version
+      nodejs: 10
     # commands:
       # - command
   #pre_build:
@@ -25,7 +25,9 @@ phases:
 
   build:
     commands:
-      - yum install nodejs gcc mailcap gettext
+      - yum install gcc
+      - yum install mailcap
+      - yum install gettext
       - npm install -g npm
       - npm install
       - npm update
