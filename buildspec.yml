@@ -1,0 +1,29 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #git-credential-helper: yes
+
+phases:
+  build:
+    commands:
+      - apk --no-cache add nodejs nodejs-npm gcc jpeg-dev musl-dev pcre-dev linux-headers postgresql-dev zlib-dev mailcap gettext
+      - npm install -g npm
+      - npm install
+      - npm update
+      - npm run build
+      - pip install -r requirements.txt
+  #post_build:
+    #commands:
+      # - command
+      # - command
+artifacts:
+  files:
+    - '**/*'
+    # - location
+  #name: $(date +%Y-%m-%d)
