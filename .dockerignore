@@ -6,3 +6,7 @@ docker-compose.yml
 kubernetes
 pleio_account/config.py
 .git
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
