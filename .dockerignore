@@ -2,9 +2,8 @@ node_modules
 assets/bundles
 db.sqlite3
 Dockerfile
-docker-compose.yml
+docker-compose*
 kubernetes
-pleio_account/config.py
 .git
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

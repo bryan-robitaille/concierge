@@ -260,6 +260,9 @@ MQ_USER = ""
 MQ_PASSWORD = ""
 MQ_CONNECTION = ""
 
+# You can introspect any apps tokens
+OIDC_INTROSPECTION_VALIDATE_AUDIENCE_SCOPE = False
+
 # Axes Lockout
 AXES_CACHE = 'axes_cache'
 AXES_COOLOFF_TIME = timedelta(minutes=5)
@@ -325,6 +328,12 @@ CONSTANCE_CONFIG = {
     'EMAIL_FAIL_SILENTLY': (False, 'Should sending email fail quietly?', bool),
 
     'ACCOUNT_ACTIVATION_DAYS': (7, '', int),
+    'GRAPHQL_TRIGGER':(False, 'Get information from Profile as a Service', bool),
+    'GRAPHQL_ENDPOINT':('', 'Profile as a Service Endpoint', 'url'),
+    'SERVICE_MESH_ACTIVATION':(False, 'Activate Broadcase to Service Mesh', bool),
+    'SERVICE_MESH_USER':('', 'Username for Service Mesh', str),
+    'SERVICE_MESH_PASSWORD':('', 'Password for Service Mesh', str),
+    'SERVICE_MESH_HOST':('', 'Host name for Service Mesh endpoint', str),
 
     'APP_TITLE': ('', 'Name to use for branding.', str),
     'APP_BRAND_COLOR': ('#2185d0', 'Primary branding color.', 'color_picker'),
@@ -381,6 +390,13 @@ CONSTANCE_CONFIG_FIELDSETS = OrderedDict([
     )),
     ('Misc.', (
         'ACCOUNT_ACTIVATION_DAYS',
+        'GRAPHQL_TRIGGER',
+        'GRAPHQL_ENDPOINT',
+        'SERVICE_MESH_ACTIVATION',
+        'SERVICE_MESH_USER',
+        'SERVICE_MESH_PASSWORD',
+        'SERVICE_MESH_HOST'
+
     )),
     ('Email', (
         'EMAIL_FROM',
