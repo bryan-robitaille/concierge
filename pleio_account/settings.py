@@ -417,6 +417,9 @@ CONSTANCE_CONFIG_FIELDSETS = OrderedDict([
     ))
 ])
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+
 SECRET_KEY = os.environ.get('CONCIERGE_SECRET_KEY')
 
 default_db_path = os.path.join(BASE_DIR, 'db.sqlite3')
